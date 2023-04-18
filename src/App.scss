@@ -1,0 +1,44 @@
+@import 'src/scss/vars';
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: $ff;
+    font-size: 16px;
+    margin: 0; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+#root {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 1440px;
+    height: 960px;
+    background: #EFF0FF;
+    border-radius: 44px;
+    box-shadow: 0 1px 10px #cacaca;
+    display: grid;
+    grid-template-columns: 600px auto;
+    padding: 32px 32px 32px 40px;
+}
+
+.login__inner {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
