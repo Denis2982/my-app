@@ -1,1 +1,20 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
+
+.form {         
+    &__title {
+        @include text ($ff, 500, 14px, 20px, $dark); 
+        margin-bottom: 8px;       
+    }
+
+    &__input {
+        border: 1px solid $border;
+        border-radius: 8px;
+        padding: 10px 14px;
+        width: 100%;
+        margin-bottom: 20px;
+        &::placeholder{
+            @include text ($ff, 400, 16px, 24px, $dark-grey);
+        }
+    }
+}

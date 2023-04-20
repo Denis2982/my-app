@@ -1,3 +1,5 @@
+
+import Checkbox from '../UI/Checkbox/Checkbox';
 import Input from '../UI/Input/Input';
 import './Login.scss'
 
@@ -13,8 +15,11 @@ const Login = () => {
                 <Input title="Email" placeholder='debra.holt@example.com' type="email" />
                 <Input title="Password" placeholder='••••••••' type="password" />
             </form>
-            
 
+            <div className="remember">
+                <Checkbox text="Remember me"/>
+                <a href='/' className="forgot">Forgot Password?</a>
+            </div>  
         </div>
     );
 }
