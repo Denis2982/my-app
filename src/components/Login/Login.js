@@ -1,4 +1,4 @@
-import Form from "../Form/Form";
+import Input from '../UI/Input/Input';
 import './Login.scss'
 
 const Login = () => {
@@ -8,7 +8,13 @@ const Login = () => {
             <div className="login__subtitle">
                 Please fill your detail to access your account.
             </div>
-            <Form />
+            
+            <form action="get" className='form'>
+                <Input title="Email" placeholder='debra.holt@example.com' type="email" />
+                <Input title="Password" placeholder='••••••••' type="password" />
+            </form>
+            
+
         </div>
     );
 }
