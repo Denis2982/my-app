@@ -1,4 +1,5 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
 
 .login {
     max-width: 345px;
@@ -6,23 +7,37 @@
     align-self: center;
 
     &__title{
-        font-family: $ff;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 48px;
+        @include text ($ff, 700, 40px, 48px, $dark);        
         letter-spacing: 0.01em;
-        text-transform: capitalize;
-        color: $dark;
+        text-transform: capitalize;   
         margin-bottom: 8px;
     }
 
     &__subtitle{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;   
-        color: $dark-grey;
+        @include text ($ff, 500, 16px, 24px, $dark-grey);        
         margin-bottom: 56px;
     }
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.forgot {
+    @include text ($ff, 500, 14px, 20px, $purple);
+}
+
+.sign {    
+    text-align: center;
+    margin-top: 20px;
+    a{
+        @include text ($ff, 400, 14px, 24px, $dark); 
+    }        
+    span {
+        color: $purple;
+    }
+    
 }

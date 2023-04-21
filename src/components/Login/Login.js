@@ -1,5 +1,6 @@
-
+import Button from '../UI/Button/Button';
 import Checkbox from '../UI/Checkbox/Checkbox';
+import Google from '../Icons/Google';
 import Input from '../UI/Input/Input';
 import './Login.scss'
 
@@ -14,12 +15,21 @@ const Login = () => {
             <form action="get" className='form'>
                 <Input title="Email" placeholder='debra.holt@example.com' type="email" />
                 <Input title="Password" placeholder='••••••••' type="password" />
-            </form>
+            
 
-            <div className="remember">
-                <Checkbox text="Remember me"/>
-                <a href='/' className="forgot">Forgot Password?</a>
-            </div>  
+                <div className="remember">
+                    <Checkbox text="Remember me"/>
+                    <a href='/' className="forgot">Forgot Password?</a>
+                </div> 
+
+                <Button addClass='_primary' title='Sign in' type='submit' />
+            </form> 
+
+            <Button addClass='_secondary' linkTo='/' title='Sign in with Google' typeBtn='_primary' icon={<Google />}/>
+            <div className="sign">
+                <a href="/">Don’t have an account? <span>Sign up</span></a>
+            </div>
+            
         </div>
     );
 }

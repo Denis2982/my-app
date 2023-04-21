@@ -1,8 +1,7 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
 
 .footer {
-    font-family: $ff-i;
-    font-weight: 400;    
-    line-height: 20px;
-    color: $dark-grey;
+    @include text ($ff, 400, 16px, 20px, $dark-grey);
+    font-style: italic;
 }
