@@ -1,15 +1,19 @@
 @import 'src/scss/vars';
+@import 'src/scss/mixins';
 
 .header {
     display: flex;
     gap: 12px;
     align-items: center;
+    @include tablet{         
+        margin-bottom: 60px;              
+     }  
+    @include tablet-small{        
+        margin: 88px auto 56px;
+        flex-direction: column;              
+    }  
     span {
-        font-family: $ff;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 0.01em;
-        color: $black;
+        @include text ($ff, 500, 16px, 19px, $black);       
+        letter-spacing: 0.01em;        
     }
 }

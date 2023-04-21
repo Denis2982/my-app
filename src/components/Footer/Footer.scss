@@ -4,4 +4,7 @@
 .footer {
     @include text ($ff, 400, 16px, 20px, $dark-grey);
     font-style: italic;
+    @include tablet-small{        
+        display: none;             
+    }  
 }

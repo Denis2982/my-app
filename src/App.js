@@ -6,14 +6,16 @@ import Login from './components/Login/Login';
 
 function App() {  
   return (
-    <div className="wrapper">
-      <div className="login__inner">
-        <Header />
-        <Login />
-        <Footer />
-      </div>
-      <ImageBg />
-    </div> 
+    <div className="container">
+      <div className="wrapper">
+        <div className="login__inner">
+          <Header />
+          <Login />
+          <Footer />
+        </div>
+        <ImageBg />
+      </div> 
+    </div>
   );
 }
 

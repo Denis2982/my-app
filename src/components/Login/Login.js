@@ -3,6 +3,8 @@ import Checkbox from '../UI/Checkbox/Checkbox';
 import Google from '../Icons/Google';
 import Input from '../UI/Input/Input';
 import './Login.scss'
+import EyeIcon from '../Icons/EyeIcon';
+import CrossIcon from '../Icons/CrossIcon';
 
 const Login = () => {
     return (
@@ -13,8 +15,8 @@ const Login = () => {
             </div>
             
             <form action="get" className='form'>
-                <Input title="Email" placeholder='debra.holt@example.com' type="email" />
-                <Input title="Password" placeholder='••••••••' type="password" />
+                <Input title="Email" placeholder='debra.holt@example.com' type="email" iconInput={<CrossIcon />}/>
+                <Input title="Password" placeholder='••••••••' type="password" iconInput={<EyeIcon />}/>
             
 
                 <div className="remember">

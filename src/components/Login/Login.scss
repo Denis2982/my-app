@@ -5,17 +5,42 @@
     max-width: 345px;
     justify-self: center;
     align-self: center;
+    @include tablet{         
+        margin-bottom: 90px;              
+    }
+    @include tablet-small{ 
+        margin-bottom: 72px; 
+        position: relative;      
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 134px;
+            height: 5px;
+            background: rgba(52, 64, 84, 0.85);
+            border-radius: 2.5px;
+            bottom: -82px;
+            left: 50%;
+            transform: translateX(-50%)
+        }             
+    }    
 
     &__title{
         @include text ($ff, 700, 40px, 48px, $dark);        
         letter-spacing: 0.01em;
         text-transform: capitalize;   
         margin-bottom: 8px;
+        @include tablet-small{        
+            @include text ($ff, 700, 32px, 39px, $dark);              
+        }
     }
 
     &__subtitle{
         @include text ($ff, 500, 16px, 24px, $dark-grey);        
         margin-bottom: 56px;
+        @include tablet-small{        
+            @include text ($ff, 500, 14px, 24px, $dark-grey);              
+        }
     }
 }
 
